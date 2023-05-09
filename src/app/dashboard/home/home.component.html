@@ -1,0 +1,56 @@
+<div class="home product-list">
+  <section class="header-section mat-elevation-z10">
+    <div class="flex"></div>
+
+    <div class="flex">
+      <mat-form-field appearance="outline" class="search-ctrl">
+        <mat-label>Search</mat-label>
+        <input matInput type="text" [formControl]="searchCtrl">
+        <button *ngIf="searchCtrl.value?.length" matSuffix mat-icon-button aria-label="Clear" (click)="onClearSearch()"
+                type="button">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </section>
+  <div class="content-wrapper">
+    <section class="filter-section">
+
+      <div class="flex-column category" [formGroup]="companyCtrl">
+        <label>Category</label>
+        <p><mat-checkbox formControlName="Apple">Apple</mat-checkbox></p>
+        <p><mat-checkbox formControlName="Samsung">Samsung</mat-checkbox></p>
+        <p><mat-checkbox formControlName="Xiaomi">Xiaomi</mat-checkbox></p>
+        <p><mat-checkbox formControlName="OnePlus">OnePlus</mat-checkbox></p>
+        <p><mat-checkbox formControlName="Lava">Lava</mat-checkbox></p>
+        <p><mat-checkbox formControlName="OnePlus">OnePlus</mat-checkbox></p>
+        <p><mat-checkbox formControlName="Google">Google</mat-checkbox></p>
+      </div>
+
+      <div class="flex-column availability">
+        <label>Availability</label>
+        <mat-radio-group
+          [formControl]="availabilityCtrl">
+          <mat-radio-button *ngFor="let t of availabilityOptions" [value]="t.value">
+            {{t.label}}
+          </mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <app-product-item *ngFor="let product of products;"
+                        [product]="product"
+                        (edit)="openEditProduct($event.id)"
+                        (refresh)="getProducts()">
+      </app-product-item>
+    </section>
+  </div>
+
+
+  <div class="add-button">
+    <button mat-fab color="accent" aria-label="Add Product" (click)="openEditProduct(0)">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</div>

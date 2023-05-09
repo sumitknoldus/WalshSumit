@@ -1,0 +1,25 @@
+<mat-card class="detailPage">
+  <button class="backButton-productDetail" mat-fab color="accent" (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <div class="alignDivs">
+  <mat-card  class="productDetail-card backButton-productDetail">
+    <mat-card-header>
+
+      <mat-card-title>{{product.title}}</mat-card-title>
+
+    </mat-card-header>
+    <img mat-card-image src="{{product.imageURL}}" class="image">
+    <mat-card-content>
+      <p>
+        {{product.description}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+    <div class="productDetail-card">
+      <h1>History</h1>
+      <p>
+      {{product.history}}
+    </p></div>
+  </div>
+</mat-card>

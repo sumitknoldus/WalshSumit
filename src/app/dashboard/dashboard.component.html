@@ -1,0 +1,21 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Walsh Integrated</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard/home">
+        <mat-icon matListItemIcon>home</mat-icon>
+        Home
+      </a>
+      <a mat-list-item routerLink="/dashboard/trash-products">
+        <mat-icon matListItemIcon>delete</mat-icon>
+        Trash
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

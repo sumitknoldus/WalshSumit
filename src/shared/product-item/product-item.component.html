@@ -1,0 +1,29 @@
+<mat-card class="product-card" (click)="openDetail()">
+  <mat-card-header>
+    <mat-card-title>{{product.title}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{product.imageURL}}" class="zoom">
+  <mat-card-content>
+    <p>
+      {{product.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="gap-10">
+    <ng-container *ngIf="trashed">
+      <button mat-raised-button (click)="onRestore($event)" color="primary">Restore</button>
+      <button mat-raised-button (click)="onRemove($event)" color="primary">Remove</button>
+    </ng-container>
+    <ng-container *ngIf="!trashed">
+      <button mat-mini-fab color="accent" aria-label="Edit" (click)="onEdit($event)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-mini-fab color="accent" aria-label="Delete" (click)="onDelete($event)">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button mat-mini-fab color="accent" aria-label="Like">
+        <mat-icon>thumb_up</mat-icon>
+      </button>
+    </ng-container>
+
+  </mat-card-actions>
+</mat-card>

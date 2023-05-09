@@ -1,0 +1,60 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  //flex-wrap: wrap;
+
+  .header-section {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+
+    .search-ctrl {
+      margin: 10px 5px;
+
+      ::ng-deep .mat-mdc-form-field-subscript-wrapper {
+        display: none;
+      }
+    }
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 100%;
+    height: 100%;
+    padding: 15px;
+  }
+
+  .filter-section {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 200px;
+    width: 200px;
+    overflow-y: auto;
+
+    .availability,
+    .category {
+      label {
+        font-weight: 700;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .content-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+  }
+
+  .add-button {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+  }
+}

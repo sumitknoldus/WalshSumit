@@ -1,0 +1,60 @@
+<form [formGroup]="form" *ngIf="form" (submit)="onSubmit()">
+  <h1 mat-dialog-title>{{isAdd ? 'Add ' : 'Edit '}} Product</h1>
+  <div mat-dialog-content>
+    <div class="flex-column form-content">
+      <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title">
+        <mat-error *ngIf="form.get('title')?.hasError('required')">Title is mandatory.</mat-error>
+        <mat-error *ngIf="form.get('title')?.hasError('max')">Title must be of max 50 characters.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Color</mat-label>
+        <input matInput formControlName="color">
+        <mat-error *ngIf="form.get('color')?.hasError('required')">Color is mandatory.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Company</mat-label>
+        <input matInput formControlName="company">
+        <mat-error *ngIf="form.get('company')?.hasError('required')">Company is mandatory.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Image URL</mat-label>
+        <input matInput formControlName="imageURL">
+        <mat-error *ngIf="form.get('imageURL')?.hasError('required')">Image URL is mandatory.</mat-error>
+        <mat-error *ngIf="form.get('imageURL')?.hasError('pattern')">Image URL is invalid.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+        <mat-error *ngIf="form.get('description')?.hasError('required')">Description is mandatory.</mat-error>
+        <mat-error *ngIf="form.get('description')?.hasError('min')">Description must be of min 150 characters.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Price</mat-label>
+        <input matInput formControlName="price">
+        <mat-error *ngIf="form.get('price')?.hasError('required')">Price is mandatory.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Stock Availability</mat-label>
+        <mat-select formControlName="availability">
+          <mat-option [value]="true">In Stock</mat-option>
+          <mat-option [value]="false">Out Of Stock</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <div class="flex justify-content-between">
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button mat-raised-button color="accent" type="button" [mat-dialog-close]="">Cancel</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "remove": false,
+    "title": "Iphone 14 pro",
+    "color": "Blue",
+    "company": "Apple",
+    "description": "The iPhone 14 looks identical to the iPhone 13, but there's a new 6.7-inch model called the iPhone 14 Plus. Under-the-hood improvements include 6GB of RAM, a 5-core GPU, Bluetooth 5.3, and multiple camera updates.",
+    "price": "$1300",
+    "availability": true,
+    "imageURL":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677427681.17943185!500x500.png",
+    "history": "The iPhone is a smartphone made by Apple that combines a computer, iPod, digital camera and cellular phone into one device with a touchscreen interface. The iPhone runs the iOS operating system, and in 2021 when the iPhone 13 was introduced, it offered up to 1 TB of storage and a 12-megapixel camera.\n      The original iPhone was announced on Jan. 9, 2007, at the Macworld convention by Apple co-founder Steve Jobs. While it was not considered the first smartphone, the iPhone has helped drive the global shift to mobile computing among both consumers and businesses. Its primary rival has been Google Android-based devices from companies such as Samsung, also introduced in 2007.\n      The first-generation iPhone came preloaded with a suite of Apple software, including iTunes, the Safari web browser and iPhoto. Internet Message Access Protocol and Post Office Protocol 3 email services were integrated with the device.\n      Apple released the iPhone under an exclusive two-year partnership with AT&T Wireless, but it took less than three months for hackers to unlock the device for use on any Global System for Mobile communication network."
+  },
+  {
+    "id": 2,
+    "remove": false,
+    "title": "Pixel duo S",
+    "color": "White",
+    "company": "Google",
+    "description": "Released on October 19, 2021, the Google Pixel 6 featured a design overhaul, including a wide, horizontal camera strip. Inside the phone, they used Google's custom silicon processor, Tensor, instead of the Snapdragon processors used in previous models. This allowed the phone to better support proprietary Google features in a battery-efficient way.",
+    "price": "$1200",
+    "availability": false,
+    "imageURL":"https://lh3.googleusercontent.com/gBeuBYOYlpKGYoETIxeuuMAASpYWKHz8kN1YjOlRTGXeazhAw-Tp4uztU8tLdlV9p5AnNC8Z4VlQTrfXPAXd-3PGlxWMk4uV-9sv=rw-e365-w400",
+    "history": "Google Pixel is a brand of portable consumer electronic devices developed by Google that run either ChromeOS or the Android operating system. The main line of Pixel products consist of Android-powered smartphones, which have been produced since October 2016 as the replacement of the older Nexus, and of which the Pixel 7 is the current model. The Pixel brand also includes laptop and tablet computers, as well as several accessories, and was originally introduced in February 2013 with the Chromebook Pixel."
+  },
+  {
+    "id": 3,
+    "remove": false,
+    "title": "OnePlus Nord Pro",
+    "color": "Black",
+    "company": "OnePlus",
+    "description": "The OnePlus Nord looks identical to the flagship phones, but there's a new 6.7-inch model called the OnePlus Nord Plus. Under-the-hood improvements include 6GB of RAM, a 5-core GPU, Bluetooth 5.3, and multiple camera updates.",
+    "price": "$1000",
+    "availability": true,
+    "imageURL":"https://image01.oneplus.net/ebp/202304/19/1-M00-43-A2-CkvLh2Q_r6GAJgToAAD0wMl_B5I63.webp?x-amz-process=image/format,webp/quality,Q_80",
+    "history": "OnePlus was founded by Pete Lau and Carl Pei on 16 December 2013 to develop a high-end flagship smartphone running Cyanogen OS that would come to be known as the OnePlus One. OnePlus would continue to release phones throughout the 2010s and 2020s. In 2020, OnePlus released the OnePlus Nord, its first mid-range smartphone since the OnePlus X in 2015. Pei would oversee the design and marketing of OnePlus' products until his departure from the company in October 2020, going on to found the consumer electronics manufacturer Nothing. In 2022–2023, OnePlus is still actively producing affordably priced phones ($200–749 USD) with top-of-the-line specs comparable to leading Samsung phones, including 5G connectivity. OnePlus is also partnered with T-Mobile to provide OnePlus Phone through T-Mobile to extend its legitimacy and reach."
+  },
+  {
+    "id": 4,
+    "remove": false,
+    "color": "Red",
+    "title": "Galaxy S22",
+    "company": "Samsung",
+    "description": "The Galaxy S22 looks identical to the flaship phones, but there's a new 6.7-inch model called the Galaxy S22 Plus. Under-the-hood improvements include 6GB of RAM, a 5-core GPU, Bluetooth 5.3, and multiple camera updates.",
+    "price": "$1400",
+    "availability": true,
+    "imageURL":"https://images.samsung.com/is/image/samsung/p6pim/ca/2108/gallery/ca-galaxy-z-fold3-f926-5g-sm-f926wzkaxac-thumb-477354024?$216_216_PNG$",
+    "history": "Samsung Group,[3] or simply Samsung (Korean: 삼성; RR: samseong [samsʌŋ]) (stylized as SΛMSUNG), is a South Korean multinational manufacturing conglomerate headquartered in Samsung Town, Seoul, South Korea.[1] It comprises numerous affiliated businesses,[1] most of them united under the Samsung brand, and is the largest South Korean chaebol (business conglomerate). As of 2020, Samsung has the eighth highest global brand value.[4]\n\nSamsung was founded by Lee Byung-chul in 1938 as a trading company. Over the next three decades, the group diversified into areas including food processing, textiles, insurance, securities, and retail. Samsung entered the electronics industry in the late 1960s and the construction and shipbuilding industries in the mid-1970s; these areas would drive its subsequent growth. Following Lee's death in 1987, Samsung was separated into five business groups – Samsung Group, Shinsegae Group, CJ Group and Hansol Group, and JoongAng Group.\n\nNotable Samsung industrial affiliates include Samsung Electronics (the world's largest information technology company, consumer electronics maker and chipmaker measured by 2017 revenues),[5][6] Samsung Heavy Industries (the world's second largest shipbuilder measured by 2010 revenues),[7] and Samsung Engineering and Samsung C&T Corporation (respectively the world's 13th and 36th largest construction companies).[8] Other notable subsidiaries include Samsung Life Insurance (the world's 14th largest life insurance company),[9] Samsung Everland (operator of Everland Resort, the oldest theme park in South Korea)[10] and Cheil Worldwide (the world's 15th largest advertising agency, as measured by 2012 revenues).[11][12]"
+  },
+  {
+    "id": 5,
+    "remove": false,
+    "title": "Redmi Note 11",
+    "color": "Violet",
+    "company": "Xiaomi",
+    "description": "The Redmi Note 11 looks identical to the flagship phones, but there's a new 6.7-inch model called the Redmi Note 11 Plus. Under-the-hood improvements include 6GB of RAM, a 5-core GPU, Bluetooth 5.3, and multiple camera updates.",
+    "price": "$500",
+    "availability": true,
+    "imageURL":"https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1677427681.17943185!500x500.png",
+    "history": "Xiaomi was founded in 2010 in Beijing by now multi-billionaire Lei Jun when he was 40 years old, along with six senior associates. Lei had founded Kingsoft as well as Joyo.com, which he sold to Amazon for $75 million in 2004. In August 2011, Xiaomi released its first smartphone and, by 2014, it had the largest market share of smartphones sold in China. Initially the company only sold its products online; however, it later opened brick and mortar stores.[5] By 2015, it was developing a wide range of consumer electronics.[6] In 2020, the company sold 146.3 million smartphones and its MIUI mobile user interface has over 500 million monthly active users.[7] As of 2023, Xiaomi is the third-largest seller of smartphones worldwide, with a market share of about 12%, according to Counterpoint.[8] Its contribution is so good that people have started calling Xiaomi the Apple of China. It has come up with its own range of wearable items. Its devices are loaded with state-of-the-art technology.[9] It also is a major manufacturer of appliances including televisions, flashlights, unmanned aerial vehicles, and air purifiers using its Internet of Things and Xiaomi Smart Home product ecosystems."
+  },
+  {
+    "id": 6,
+    "remove": false,
+    "title": "Lava 11",
+    "color": "Cyan",
+    "company": "Lava",
+    "description": "The Lava 11 looks identical to the flagship phone, but there's a new 6.7-inch model called the Lava 11 Plus. Under-the-hood improvements include 6GB of RAM, a 5-core GPU, Bluetooth 5.3, and multiple camera updates.",
+    "price": "$999",
+    "availability": false,
+    "imageURL":"https://www.mi4canada.com/wp-content/uploads/2023/03/Redmi-12C-Mint-Green-100x100.jpg",
+    "history": "Lava International (stylized as LΛVΛ) is an Indian multinational electronics company that manufactures smartphones, laptops, computer hardware and consumer electronics. It was founded in 2009 by Hari Om Rai, Sunil Bhalla, Shailendra Nath Rai and Vishal Sehgal[1] as an offshoot of a telecommunication venture. It is headquartered in Noida, Uttar Pradesh, India,[3] and has overseas operations in a number of countries.[4]"
+  },
+  {
+    "id": 7,
+    "remove": true,
+    "title": "Razor 11",
+    "color": "Black",
+    "company": "Micromax",
+    "description": "The Razor 11 looks identical to the flagship phones, but there's a new 6.7-inch model called the Razor 11 Plus. Under-the-hood improvements include 6GB of RAM, a 5-core GPU, Bluetooth 5.3, and multiple camera updates.",
+    "price": "$899",
+    "availability": true,
+    "imageURL":"https://micromaxinfo.com/pub/media/catalog/product/cache/a2910b080eca5b97079773d00477689e/i/n/in_note-1_green_04_1.png",
+    "history": "The razor is a smartphone made by Micromax that combines a computer, iPod, digital camera and cellular phone into one device with a touchscreen interface. The razor runs the iOS operating system, and in 2021 when the razor 13 was introduced, it offered up to 1 TB of storage and a 12-megapixel camera.\n      The original razor was announced on Jan. 9, 2007, at the Macworld convention by Micromax co-founder Steve Jobs. While it was not considered the first smartphone, the razor has helped drive the global shift to mobile computing among both consumers and businesses. Its primary rival has been Google Android-based devices from companies such as Samsung, also introduced in 2007.\n      The first-generation razor came preloaded with a suite of Micromax software, including iTunes, the Safari web browser and iPhoto. Internet Message Access Protocol and Post Office Protocol 3 email services were integrated with the device.\n      Micromax released the razor under an exclusive two-year partnership with AT&T Wireless, but it took less than three months for hackers to unlock the device for use on any Global System for Mobile communication network."
+  }
+]
