@@ -45,7 +45,7 @@ export class EditProductComponent implements OnInit, OnDestroy {
       color: ['', [Validators.required]],
       company: ['', [Validators.required]],
       description: ['', [Validators.required, Validators.min(150)]],
-      imageURL: ['', [Validators.required, Validators.pattern(/^(https?:\/\/.*\.(?:png|jpg))$/)]],
+      imageURL: ['', [Validators.required]],
       price: ['', [Validators.required]],
       availability: [true, [Validators.required]],
     });
@@ -53,12 +53,18 @@ export class EditProductComponent implements OnInit, OnDestroy {
 
 
   onSubmit() {
+    console.log(this.isAdd)
     if (this.form.invalid) {
       return;
     }
+    if(this.isAdd){
+      this.subscriptions.add(this.productService.create(this.form.value)
+        .subscribe((products) => this.dialogRef.close(products)));
+    } else {
+      this.subscriptions.add(this.productService.update(this.form.value)
+        .subscribe((products) => this.dialogRef.close(products)));
+    }
 
-    this.subscriptions.add(this.productService.create(this.form.value)
-      .subscribe((products) => this.dialogRef.close(products)));
   }
 
   ngOnDestroy() {

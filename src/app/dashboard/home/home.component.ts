@@ -105,6 +105,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       // height: '50vh',
       data: {
         productId,
+
       }
     });
     dialogRef.afterClosed().subscribe(result => {

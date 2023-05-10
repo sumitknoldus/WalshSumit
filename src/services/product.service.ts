@@ -30,6 +30,18 @@ export class ProductService {
     return this.products$.asObservable();
   }
 
+  update(data: any): Observable<any> {
+    const products = this.products$.getValue();
+    // data.id = products.length + 1;
+    var foundIndex = products.findIndex(x => x.company == data.company);
+    data.id = products[foundIndex].id;
+    data.history = products[foundIndex].history;
+    products[foundIndex] = data;
+    // products.push(data);
+    this.products$.next([...products]);
+    return this.products$.asObservable();
+  }
+
   getById(productId: any): Observable<any> {
     const products = this.products$.getValue();
     const product = products.find(t => t.id === productId);
