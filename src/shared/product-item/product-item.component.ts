@@ -1,20 +1,21 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnDestroy, Output} from '@angular/core';
 import {ProductService} from "../../services/product.service";
 import {Router} from "@angular/router";
 import {MatDialog} from "@angular/material/dialog";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
   styleUrls: ['./product-item.component.scss']
 })
-export class ProductItemComponent {
+export class ProductItemComponent implements OnDestroy {
   @Input() product: any;
   @Input() trashed = false;
 
   @Output() refresh: EventEmitter<any> = new EventEmitter<any>();
   @Output() edit: EventEmitter<any> = new EventEmitter<any>();
-
+  subscriptions = new Subscription();
   constructor(private productService: ProductService,
               private router: Router,
               public dialog: MatDialog) {
@@ -26,14 +27,14 @@ export class ProductItemComponent {
 
   onRestore(e: any): void {
     e?.stopPropagation();
-    this.productService.restoreById(this.product.id)
-      .subscribe(() => this.refresh.emit(true));
+    this.subscriptions.add(this.productService.restoreById(this.product.id)
+      .subscribe(() => this.refresh.emit(true)));
   }
 
   onRemove(e: any): void {
     e?.stopPropagation();
-    this.productService.removeHardById(this.product.id)
-      .subscribe(() => this.refresh.emit(true));
+    this.subscriptions.add(this.productService.removeHardById(this.product.id)
+      .subscribe(() => this.refresh.emit(true)));
   }
 
   onDelete(e: any): void {
@@ -47,6 +48,10 @@ export class ProductItemComponent {
   onEdit(e: any): void {
     e?.stopPropagation();
     this.edit.emit(this.product);
+  }
+
+  ngOnDestroy() {
+    this.subscriptions.unsubscribe();
   }
 
 }

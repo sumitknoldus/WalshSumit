@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {ProductService} from "../../../services/product.service";
 import {FormBuilder, FormControl} from "@angular/forms";
-import {debounceTime, tap} from "rxjs";
+import {debounceTime, Subscription, tap} from "rxjs";
 import {MatDialog} from "@angular/material/dialog";
 import {EditProductComponent} from "../edit-product/edit-product.component";
 
@@ -11,7 +11,7 @@ import {EditProductComponent} from "../edit-product/edit-product.component";
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
   searchCtrl = new FormControl('');
   availabilityCtrl = new FormControl('');
@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
     {label: 'In Stock', value: true},
     {label: 'Out Of Stock', value: false}
   ];
+  subscriptions = new Subscription();
 
   constructor(router: Router,
               private dialog: MatDialog,
@@ -40,17 +41,17 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.getProducts(this.filters);
-    this.searchCtrl.valueChanges.subscribe(t => {
+    this.subscriptions.add(this.searchCtrl.valueChanges.subscribe(t => {
       this.filters.search = t;
       this.getProducts(this.filters);
-    });
+    }));
 
-    this.availabilityCtrl.valueChanges.subscribe(t => {
+    this.subscriptions.add(this.availabilityCtrl.valueChanges.subscribe(t => {
       this.filters.availability = t;
       this.getProducts(this.filters);
-    });
+    }));
 
-    this.companyCtrl.valueChanges.subscribe((t: any) => {
+    this.subscriptions.add(this.companyCtrl.valueChanges.subscribe((t: any) => {
       let categoryFilter: string[] = [];
       for (let key in t) {
         if (t[key]) {
@@ -60,16 +61,16 @@ export class HomeComponent implements OnInit {
       // console.log(categoryFilter);
       this.filters.company = categoryFilter;
       this.getProducts(this.filters);
-    })
+    }));
   }
 
   getProducts(filters?: any): void {
-    this.productService.getAllProducts(filters)
+    this.subscriptions.add(this.productService.getAllProducts(filters)
       .subscribe(products => {
         // this.companyCtrl.reset();
         this.products = products || [];
         console.log('products ares: ', this.products);
-      });
+      }));
   }
 
   onClearSearch(): void {
@@ -112,5 +113,9 @@ export class HomeComponent implements OnInit {
       }
       this.getProducts(this.filters); // update the product list.
     });
+  }
+
+  ngOnDestroy() {
+    this.subscriptions.unsubscribe();
   }
 }
